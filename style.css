@@ -189,7 +189,7 @@ body{
 }
 .footer{
 	border: 2px solid black;
-    height: 100px;
+    height: 11%;
     width: auto;
 	position: relative;
 	background-color: antiquewhite;	
@@ -239,6 +239,12 @@ body{
     align-items: center;
     padding: 2%;
     border: black 10px solid;
+}
+#francis{
+    border: 10px solid black;
+    height: 100%;
+    width: 99%;
+    border-radius: 10px; 
 }
 
 	
