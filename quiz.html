@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz </title>
+    <style>
+        #quizbody{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 100%;
+        }
+        #homepagebutton{
+            width: 30%;
+            float: right;
+        }
+        .quizbutton{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <p class="headingwords"> Torness Nuclear Reactor Quiz </p>
+
+    </div>  
+    <br>
+    <br>
+    <div id="quizbody"> 
+    <div id="quizwrapper">
+    <div id="quizcontainer">
+    <button id="homepagebutton" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="window.location.href='index.html';"> Homepage </button> 
+    <div style="height: 100px;width: auto;">  </div>
+    <p style="font-size: 20px;text-decoration: underline;"> When was the station built? </p>
+    <button class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer()"> 1991</button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer()"> 1989 </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="rightanswer()"> 1988 </button>
+    <p class="output" id="output1"> ... </p>
+    <p id="output1.5" style="font-size: 23px;text-decoration: underline;"> </p>
+    <br>
+    <br>
+    <button onmouseover="newstyle(this)" onmouseout="oldstyle(this)" class="quizbutton" id="showanswer1" onclick="showanswer1()"> Show Answer.</button>
+    <hr> 
+    <p style="font-size: 20px;text-decoration: underline;"> Is it East, South, or West of Edinburgh? </p>
+    <button class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer2()"> South </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="rightanswer2()"> East </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer2()"> West </button>
+    <p class="output" id="output2"> ... </p>
+    <p id="output2.5" style="font-size: 23px;text-decoration: underline;"> </p>
+    <br>
+    <br>
+    <button onmouseover="newstyle(this)" onmouseout="oldstyle(this)" class="quizbutton" id="showanswer2" onclick="showanswer2()"> Show Answer.</button>
+    <hr>
+    <p style="font-size: 20px;text-decoration: underline;"> When is it expected to be shut down? </p>
+    <button class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="rightanswer3()"> 2028</button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer3()"> 2026 </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer3()"> 2024 </button>
+    <p class="output" id="output3"> ... </p>
+    <p id="output3.5" style="font-size: 23px;text-decoration: underline;"> </p>
+    <br>
+    <br>
+    <button onmouseover="newstyle(this)" onmouseout="oldstyle(this)" class="quizbutton" id="showanswer3" onclick="showanswer3()"> Show Answer.</button>
+    <hr>
+    <p style="font-size: 20px;text-decoration: underline;"> How many people protested to terminate the construction of the plant? </p>
+    <button class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer5()"> 10000</button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="rightanswer5()"> 4000 </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer5()"> 3000 </button>
+    <p class="output" id="output5"> ... </p>
+    <p id="output5.5" style="font-size: 23px;text-decoration: underline;"> </p>
+    <br>
+    <br>
+    <button onmouseover="newstyle(this)" onmouseout="oldstyle(this)" class="quizbutton" id="showanswer5" onclick="showanswer5()"> Show Answer.</button>
+    <hr>
+    <p style="font-size: 20px;text-decoration: underline;"> How much energy can it produce at peak efficiency? </p>
+    <button class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer6()"> 1,718 MWe</button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="wronganswer6()"> 2,104 MWe </button>
+    <br>
+    <button style="border-top: 0;" class="quizbutton" onmouseover="newstyle(this)" onmouseout="oldstyle(this)" onclick="rightanswer6()"> 1,364 MWe </button>
+    <p class="output" id="output6"> ... </p>
+    <p id="output6.5" style="font-size: 23px;text-decoration: underline;"> </p>
+    <br>
+    <br>
+    <button onmouseover="newstyle(this)" onmouseout="oldstyle(this)" class="quizbutton" id="showanswer6" onclick="showanswer6()"> Show Answer.</button>
+
+
+    </div>
+    </div>
+    </div>
+</body>
+</html>
