@@ -125,11 +125,11 @@ function hideanswer6(){
 }
 function rightanswer6(){
     let x = "Right, well done!";
-    document.getElementById("output5").innerHTML = x;
+    document.getElementById("output6").innerHTML = x;
 }
 function wronganswer6(){
     let x = "Wrong, try again!!!";
-    document.getElementById("output5").innerHTML = x; 
+    document.getElementById("output6").innerHTML = x; 
 }
 
 
